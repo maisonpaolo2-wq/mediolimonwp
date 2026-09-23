@@ -13,7 +13,7 @@ export default function Separator({
   alt: string
   children?: React.ReactNode
   position?: string
-  tone?: 'ink' | 'lemon'
+  tone?: 'ink' | 'rose'
 }) {
   return (
     <section className={`sep sep--${tone}`}>

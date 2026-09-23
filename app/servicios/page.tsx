@@ -46,7 +46,11 @@ export default function ServiciosPage() {
       />
 
       {services.map((s, i) => (
-        <section key={s.slug} id={s.slug} className={`section svc${i % 2 ? ' svc--flip section--surface' : ''}`}>
+        <section
+          key={s.slug}
+          id={s.slug}
+          className={`section svc${i % 2 ? ' svc--flip section--surface' : ''}${['', ' svc--rose', ' svc--leaf'][i % 3]}`}
+        >
           <div className="container svc__grid">
             <Reveal variant="scale-in" className="svc__photo">
               <Image src={s.image} alt={s.imageAlt} fill sizes="(min-width: 960px) 55vw, 100vw" style={{ objectFit: 'cover' }} />

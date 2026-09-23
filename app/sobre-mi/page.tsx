@@ -96,7 +96,7 @@ export default function SobreMiPage() {
         </div>
       </section>
 
-      <Separator src={sunset.src} alt={sunset.alt} position="center 45%" tone="lemon">
+      <Separator src={sunset.src} alt={sunset.alt} position="center 45%" tone="rose">
         <p className="sep__quote">{site.quote}</p>
       </Separator>
 

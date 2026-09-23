@@ -7,6 +7,7 @@ import Gallery from '@/components/Gallery'
 import Testimonials from '@/components/Testimonials'
 import ContactForm from '@/components/ContactForm'
 import LemonHeart from '@/components/LemonHeart'
+import HeartBand from '@/components/HeartBand'
 import { directHref, directLabel } from '@/components/WhatsAppButton'
 import { photoBySrc, photos, processSteps, services, site } from '@/content/data'
 
@@ -55,6 +56,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HeartBand />
 
       {/* SERVICIOS · tarjetas con foto */}
       <section className="section section--surface services" id="servicios">
@@ -125,7 +128,7 @@ export default function Home() {
       <section className="section section--surface portfolio-home" id="portfolio">
         <div className="container section-head section-head--split">
           <div>
-            <span className="section-num" aria-hidden="true">02</span>
+            <span className="section-num section-num--rose" aria-hidden="true">02</span>
             <Eyebrow>Portfolio</Eyebrow>
             <Reveal><h2 className="h-xl">Bodas que <em>ya son recuerdo</em></h2></Reveal>
           </div>
@@ -162,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Separator src={press.src} alt={press.alt} position="center 35%" tone="lemon">
+      <Separator src={press.src} alt={press.alt} position="center 35%" tone="rose">
         <p className="sep__eyebrow">Visto en</p>
         <p className="sep__quote sep__quote--big">{site.press}</p>
         <p className="sep__note">Una de nuestras bodas en el Cortijo El Madroño, publicada en la revista.</p>
@@ -182,7 +185,7 @@ export default function Home() {
       <section className="section contact-home" id="contacto">
         <div className="container contact-home__grid">
           <div className="contact-home__side">
-            <span className="section-num" aria-hidden="true">03</span>
+            <span className="section-num section-num--lemon" aria-hidden="true">03</span>
             <Eyebrow>Contacto</Eyebrow>
             <Reveal><h2 className="h-xl">¿Tomamos <em>un café?</em></h2></Reveal>
             <Reveal delay={0.1}>

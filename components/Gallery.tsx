@@ -28,7 +28,9 @@ export default function Gallery({ photos, layout = 'masonry' }: Props) {
             className={film ? 'film__item' : 'masonry__item'}
             onClick={() => setOpen(i)}
             aria-label={`Ampliar foto: ${p.alt}`}
-            initial={{ opacity: 0, scale: 1.04 }}
+            // En la tira horizontal las fotos fuera de pantalla nunca "entran" en vista por scroll vertical,
+            // así que ahí solo se anima la entrada de la fila, sin ocultar las que asoman.
+            initial={film ? false : { opacity: 0, scale: 1.04 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.5, delay: (i % 4) * 0.08, ease: EASE }}

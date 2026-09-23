@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { DM_Serif_Display, Outfit } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -7,17 +7,18 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 import MotionProvider from '@/components/MotionProvider'
 import { site, testimonials, services } from '@/content/data'
 
-const serif = DM_Serif_Display({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  weight: '400',
+// Fuentes locales (subset latin de Google Fonts): next/font/google puede romper el build en Vercel.
+const serif = localFont({
+  src: [
+    { path: './fonts/dm-serif-display.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/dm-serif-display-italic.woff2', weight: '400', style: 'italic' },
+  ],
   variable: '--font-serif',
   display: 'swap',
 })
 
-const sans = Outfit({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
+const sans = localFont({
+  src: [{ path: './fonts/outfit-variable.woff2', weight: '300 500', style: 'normal' }],
   variable: '--font-sans',
   display: 'swap',
 })
