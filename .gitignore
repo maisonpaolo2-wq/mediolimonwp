@@ -1,0 +1,13 @@
+.next/
+node_modules/
+.env
+.env.local
+.env.*.local
+out/
+*.log
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+next-env.d.ts
+# capturas originales con chrome de Instagram (no se publican)
+scripts/raw/
